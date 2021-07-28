@@ -52,7 +52,7 @@
             $("#search").val("")
         }
         $("#lastmovies").hide();
-        $("#movies").load("/Home/_MoviesFiltred",
+        $("#movies").load("../Home/_MoviesFiltred",
             { filtre: id, search: $("#search").val() }, function () {
 
             });
