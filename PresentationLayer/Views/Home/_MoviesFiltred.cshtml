@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "";
+}
+<div class="filtred">
+    <h3>@ViewBag.filter</h3>
+    <div class="row">
+        @foreach (var movie in Model.results)
+        {
+
+            <div class="col-sm-3 peli-grid">
+                <a href='@Url.Action("Details", "Home",new { MovieId = @movie.id})'>
+                    <p class="movie-title">@movie.title</p>
+                    <img class="@movie.title" id="@movie.id" src="https://image.tmdb.org/t/p/w200/@movie.poster_path" />
+                    <br />
+                </a>
+            </div>
+
+        }
+    </div>
+</div>

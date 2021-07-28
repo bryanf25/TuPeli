@@ -1,0 +1,29 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div class="details-header">
+        <img class="cover" src="https://image.tmdb.org/t/p/w500/@Model.backdrop_path" />
+    </div>
+    <div class="details-body">
+        <h1 class="Title">@Model.title</h1>
+        <div class="Info">
+            <p style="color:#ff00f2" ;="">Titulo Original: @Model.original_title</p>
+            <strong>
+                <span class="Date">Fecha Estreno: @Model.release_date</span>
+                Puntuación: <span class="fas fa-star"> @Model.vote_average</span>
+                Popularidad: <span class="fas fa-poll"> @Model.popularity</span>
+                Total de votos: <span class="fas fa-vote-yea"> @Model.vote_count</span>
+            </strong>
+        </div>
+        <div class="Description">
+            <h4>@Model.overview</h4>
+        </div>
+    </div>
+</body>
+</html>

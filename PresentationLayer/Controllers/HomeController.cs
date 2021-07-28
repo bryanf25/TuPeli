@@ -19,11 +19,36 @@ namespace PresentationLayer.Controllers
             return View(movies);
         }
 
-        public ActionResult About()
+        public async Task<ActionResult> Details(string MovieId)
         {
-            ViewBag.Message = "Your application description page.";
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            Movie movie = await SearchCriteria.GetMovieDetails(MovieId);
+            return View(movie);
+        }
 
-            return View();
+        public async Task<ActionResult> _MoviesFiltred(int filtre, string search = "")
+        {
+            System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
+            MovieListStructure movies;
+            if (filtre ==1)
+            {
+                ViewBag.filter = "MEJOR CALIFICADAS";
+                movies = await SearchCriteria.GetTopRated();
+                return View(movies);
+            }
+            if(filtre == 2)
+            {
+                ViewBag.filter = "MÁS POPULARES";
+                movies = await SearchCriteria.GetPopular();
+                return View(movies);
+            }
+            if (filtre == 3)
+            {
+                ViewBag.filter = "BUSQUEDA";
+                movies = await SearchCriteria.GetMoviesByName(search);
+                return View(movies);
+            }
+            return View("Error");
         }
 
         public ActionResult Contact()
