@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Tu Peli";
+}
+<div class="index-header text-center">
+    <div class="box">
+        <div class="container-4">
+            <input type="search" id="search" placeholder="Buscar pelicula" />
+            <button class="icon"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</div>
+<div class="index-body">
+    @*<ul>
+        @foreach(var movie in Model.results)
+        {
+        <li>@movie.title</li>
+        }
+    </ul>*@
+    <div class="container">
+        <h3>MAS RECIENTES</h3>
+        <div class="row">
+            @foreach (var movie in Model.results)
+            {
+                <div class="col-sm-3 peli-grid">
+                    <p class="movie-title">@movie.title</p>
+                    <img id="@movie.title" src="https://image.tmdb.org/t/p/w200/@movie.poster_path" />
+                    <br />
+                </div>
+            }
+        </div>
+
+    </div>
+    <div id="movies">
+
+    </div>
+</div>
+

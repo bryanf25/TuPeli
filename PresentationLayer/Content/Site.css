@@ -1,0 +1,163 @@
+﻿@font-face {
+    font-family: 'SF Movie Poster Bold';
+    src: url('../fonts/SF Movie Poster/SF Movie Poster Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SF Movie Poster';
+    src: url('../fonts/SF Movie Poster/SF Movie Poster.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SF Movie Poster Condensed';
+    src: url('../fonts/SF Movie Poster/SF Movie Poster Condensed.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LMS Beyond Infinity';
+    src: url('../fonts/LMS Beyond Infinity.ttf') format('truetype');
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #000046; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000046, #1cb5e0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.container.body-content {
+    background: #000046; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #1CB5E0, #000046); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+
+.container-4 {
+    overflow: hidden;
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+    .container-4 input#search {
+        width: 300px;
+        height: 50px;
+        background: rgb(0, 0, 70);
+        border: none;
+        font-size: 10pt;
+        float: left;
+        color: #fff;
+        padding-left: 15px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    /*placeholder*/
+        .container-4 input#search::-webkit-input-placeholder {
+            color: white;
+        }
+
+        .container-4 input#search:-moz-placeholder { /* Firefox 18- */
+            color: white;
+        }
+
+        .container-4 input#search::-moz-placeholder { /* Firefox 19+ */
+            color: white;
+        }
+
+        .container-4 input#search:-ms-input-placeholder {
+            color: white;
+        }
+
+    .container-4 button.icon {
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: none;
+        background: #232833;
+        height: 50px;
+        width: 50px;
+        color: #4f5b66;
+        opacity: 0;
+        font-size: 10pt;
+        -webkit-transition: all .55s ease;
+        -moz-transition: all .55s ease;
+        -ms-transition: all .55s ease;
+        -o-transition: all .55s ease;
+        transition: all .55s ease;
+    }
+
+    .container-4:hover button.icon, .container-4:active button.icon, .container-4:focus button.icon {
+        outline: none;
+        opacity: 1;
+        margin-left: -50px;
+    }
+
+        .container-4:hover button.icon:hover {
+            background: white;
+        }
+
+.box {
+    margin-left: 40%;
+    margin-top:6%;
+}
+.index-body{
+    padding-top:4%;
+}
+
+.peli-grid {
+    padding-bottom: 2%;
+}
+
+.peli-grid img {
+    width: 90%;
+}
+
+
+.movie-title {
+    color: white;
+    font-family: 'SF Movie Poster';
+    font-size: 35px;
+}
+
+#Cruella{
+    width:85%;
+}
+
+#search {
+    border: 0.1px solid;
+}
+
+.container h3 {
+    color: white;
+    font-family: 'SF Movie Poster Bold';
+    font-size: 70px;
+}
+
+#logo {
+    font-family: 'LMS Beyond Infinity';
+    font-size:75px;
+color: white;
+margin-bottom: -9%;
+    margin-left: 2%;
+    margin-top: 3%;
+}
+    #logo h1 {
+        font-size: 75px;
+    }
+   
