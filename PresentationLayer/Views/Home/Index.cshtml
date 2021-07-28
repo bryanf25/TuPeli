@@ -4,7 +4,7 @@
 <div class="index-header text-center">
     <div class="box">
         <div class="container-4">
-            <input type="search" id="search" placeholder="Buscar pelicula" />
+            <input type="search" id="search" placeholder="Buscar tu peli.." />
             <button class="icon" onclick="ApplyFilter(3)"><i class="fa fa-search"></i></button>
         </div>
     </div>
@@ -48,6 +48,9 @@
 <script>
 
     function ApplyFilter(id) {
+        if (id == 1 || id == 2) {
+            $("#search").val("")
+        }
         $("#lastmovies").hide();
         $("#movies").load("/Home/_MoviesFiltred",
             { filtre: id, search: $("#search").val() }, function () {

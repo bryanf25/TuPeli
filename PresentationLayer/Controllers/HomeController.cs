@@ -30,25 +30,26 @@ namespace PresentationLayer.Controllers
         {
             System.Net.ServicePointManager.SecurityProtocol = System.Net.SecurityProtocolType.Tls12;
             MovieListStructure movies;
-            if (filtre ==1)
+            if (search == "")
             {
-                ViewBag.filter = "MEJOR CALIFICADAS";
-                movies = await SearchCriteria.GetTopRated();
-                return View(movies);
+                if (filtre == 1)
+                {
+                    ViewBag.filter = "MEJOR CALIFICADAS";
+                    movies = await SearchCriteria.GetTopRated();
+                }
+                else
+                {
+                    ViewBag.filter = "MÁS POPULARES";
+                    movies = await SearchCriteria.GetPopular();
+                };
             }
-            if(filtre == 2)
-            {
-                ViewBag.filter = "MÁS POPULARES";
-                movies = await SearchCriteria.GetPopular();
-                return View(movies);
-            }
-            if (filtre == 3)
+            else
             {
                 ViewBag.filter = "BUSQUEDA";
                 movies = await SearchCriteria.GetMoviesByName(search);
-                return View(movies);
+               
             }
-            return View("Error");
+            return View(movies);
         }
 
         public ActionResult Contact()

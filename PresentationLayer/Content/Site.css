@@ -41,6 +41,26 @@ body {
 }
 
 
+#movies {
+    border: 10px solid #000046;
+    padding-left: 6%;
+    margin-left: -6%;
+    margin-top: 4%;
+    border-radius: 35px;
+    margin-bottom: 4%;
+    margin-right: -6%;
+    padding-right: 6%;
+}
+#lastmovies {
+    border: 10px solid #000046;
+    padding-left: 6%;
+    margin-left: -6%;
+    margin-top: 4%;
+    border-radius: 35px;
+    margin-bottom: 4%;
+    margin-right: -6%;
+    padding-right: 6%;
+}
 
 .container.body-content {
     background: #000046; /* fallback for old browsers */
@@ -193,6 +213,7 @@ margin-bottom: -9%;
 .btn-Tupeli {
     background: #000046;
     border-color: #1cb5e0;
+    border-radius: 15px;
 }
 
 .filters{

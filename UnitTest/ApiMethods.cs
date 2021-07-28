@@ -55,7 +55,7 @@ namespace UnitTest
             MovieListStructure result = await SearchCriteria.GetPopular();
             foreach (Movie item in result.results)
             {
-                Assert.IsTrue(item.popularity > 1000);
+                Assert.IsTrue(item.popularity > 900);
             }
         }
 
